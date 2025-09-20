@@ -1,0 +1,42 @@
+# Maven build directory
+/target/
+
+# Maven wrapper files
+.mvn/
+!/.mvn/wrapper/maven-wrapper.jar
+mvnw
+mvnw.cmd
+
+# IntelliJ IDEA
+.idea/
+*.iml
+*.iws
+out/
+
+# Eclipse
+.project
+.classpath
+.cproject
+.settings/
+target/
+
+# VS Code
+.vscode/
+
+# Java class files
+*.class
+
+# Logs
+*.log
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# Environment files (for JDBC config, etc.)
+.env
+
+# Generated files (optional)
+*.jar
+*.war
+*.ear
