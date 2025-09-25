@@ -1,5 +1,6 @@
 package com.ist.models;
 
+
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
@@ -15,7 +16,7 @@ public class Sale {
         this.saleDate = saleDate;
     }
 
-    void setId(int id){
+    public void setId(int id){
         this.id = id;
     }
 
@@ -38,7 +39,7 @@ public class Sale {
 
     @Override
     public String toString() {
-        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm");
+        DateTimeFormatter formatter   = DateTimeFormatter.ofPattern("YYYY MM DD HH:mm:ss");
         return ("id: "+id+"\nproduct id: "+productId+"\nquantity: "+quantity+"\nsale date: "+saleDate.format(formatter));
     }
 }
