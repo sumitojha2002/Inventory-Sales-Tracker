@@ -10,8 +10,8 @@
     <version>1.0-SNAPSHOT</version>
 
     <properties>
-        <maven.compiler.source>17</maven.compiler.source>
-        <maven.compiler.target>17</maven.compiler.target>
+        <maven.compiler.source>21</maven.compiler.source>
+        <maven.compiler.target>21</maven.compiler.target>
         <javafx.version>23.0.1</javafx.version>
     </properties>
 
@@ -56,7 +56,7 @@
                 <artifactId>javafx-maven-plugin</artifactId>
                 <version>0.0.8</version>
                 <configuration>
-                    <mainClass>com.ist.MainApp</mainClass>
+                    <mainClass>com.ist.Main</mainClass>
                 </configuration>
             </plugin>
         </plugins>
