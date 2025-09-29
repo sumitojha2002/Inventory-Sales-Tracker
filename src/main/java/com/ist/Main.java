@@ -1,19 +1,18 @@
 package com.ist;
 
 import javafx.application.Application;
-import javafx.scene.Group;
+import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
 import javafx.stage.Stage;
 
 public class Main extends Application {
     @Override
-    public void start(Stage stage) {
-        Group root = new Group();
-        Scene scene = new Scene(root);
-        root.getChildren().add(new Button("Click me!"));
-        stage.setScene(scene);
-        stage.show();
+    public void start(Stage stage)throws Exception {
+     FXMLLoader dashBoardLoader = new FXMLLoader(getClass().getResource("/fxml/dashboard.fxml"));
+     Scene scene = new Scene(dashBoardLoader.load());
+     stage.setTitle("Inventory & Sales Tracker Dashboard");
+     stage.setScene(scene);
+     stage.show();
     }
 
     public static void main(String[] args) {

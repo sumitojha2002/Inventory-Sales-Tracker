@@ -1,6 +1,11 @@
 package com.ist.dao;
 
 import com.ist.models.Product;
+
+import javafx.beans.Observable;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
+
 import com.ist.dao.DatabaseConnection;
 
 import java.sql.Connection;
@@ -102,7 +107,7 @@ public class ProductDAO {
     }
 
     // 5. Get all products 
-    public List<Product> getAllProducts(){
+    public ObservableList<Product> getAllProducts(){
         List<Product> list = new ArrayList<>();
         String query = "SELECT * FROM products";
         
@@ -119,10 +124,10 @@ public class ProductDAO {
                 product.setId(id);
                 list.add(product);
             }
-            return list;
+            return FXCollections.observableArrayList(list);
         }catch(SQLException e){
             e.printStackTrace();
-            return list;
+            return FXCollections.observableArrayList(list);
         }   
     }
 

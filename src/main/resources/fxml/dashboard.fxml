@@ -11,14 +11,13 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="899.0" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="899.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ist.controllers.DashboardController">
    <children>
-      <HBox alignment="CENTER" prefHeight="400.0" prefWidth="900.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <HBox alignment="CENTER" prefHeight="500.0" prefWidth="899.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
-            <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="900.0">
+            <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="900.0" style="-fx-border-color: black;">
                <children>
-                  <HBox alignment="CENTER" layoutX="157.0" prefHeight="52.0" prefWidth="600.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                  <HBox alignment="CENTER" layoutX="157.0" prefHeight="42.0" prefWidth="900.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
                      <children>
                         <Label text=" Inventory &amp; Sales Tracker Dashboard   ">
                            <font>
@@ -27,68 +26,68 @@
                         </Label>
                      </children>
                   </HBox>
-                  <Separator layoutX="178.0" layoutY="55.0" prefHeight="0.0" prefWidth="404.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+                  <Separator layoutX="178.0" layoutY="40.0" prefHeight="18.0" prefWidth="900.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
                   <HBox alignment="CENTER" layoutY="57.0" prefHeight="52.0" prefWidth="600.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
                      <children>
                         <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="5.0" HBox.hgrow="ALWAYS">
                            <children>
                               <Label text=" Products:" />
-                              <Label text="125" />
+                              <Label fx:id="productCountLabel" />
                            </children>
                         </HBox>
                         <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="5.0" HBox.hgrow="ALWAYS">
                            <children>
                               <Label text="Customers:" />
-                              <Label text="42" />
+                              <Label fx:id="customerCountLabel" />
                            </children>
                         </HBox>
                         <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="5.0" HBox.hgrow="ALWAYS">
                            <children>
                               <Label text="Sales:" />
-                              <Label text="58" />
+                              <Label fx:id="salesCountLabel" />
                            </children>
                         </HBox>
                      </children>
                   </HBox>
-                  <Separator layoutX="181.0" layoutY="120.0" prefHeight="3.0" prefWidth="600.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
-                  <HBox layoutY="123.0" prefHeight="52.0" prefWidth="600.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                  <Separator layoutX="181.0" layoutY="105.0" prefHeight="18.0" prefWidth="900.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+                  <HBox layoutY="114.0" prefHeight="61.0" prefWidth="900.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
                      <children>
                         <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" HBox.hgrow="ALWAYS">
                            <children>
-                              <Button mnemonicParsing="false" text="Add Product" />
+                              <Button fx:id="addProduct" mnemonicParsing="false" onAction="#switchToProduct" text="Add Product" />
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="62.0" prefWidth="300.0" HBox.hgrow="ALWAYS">
+                           <children>
+                              <Button fx:id="addCustomer" mnemonicParsing="false" text="Add Customer" />
                            </children>
                         </HBox>
                         <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" HBox.hgrow="ALWAYS">
                            <children>
-                              <Button mnemonicParsing="false" text="Add Customer" />
-                           </children>
-                        </HBox>
-                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" HBox.hgrow="ALWAYS">
-                           <children>
-                              <Button mnemonicParsing="false" text="Add Sale" />
+                              <Button fx:id="addSale" mnemonicParsing="false" text="Add Sale" />
                            </children>
                         </HBox>
                      </children>
                   </HBox>
-                  <Separator layoutY="175.0" prefHeight="18.0" prefWidth="600.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
-                  <HBox alignment="CENTER" layoutY="190.0" prefHeight="42.0" prefWidth="600.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                  <Separator layoutY="166.0" prefHeight="18.0" prefWidth="900.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+                  <HBox alignment="CENTER" layoutY="180.0" prefHeight="42.0" prefWidth="900.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
                      <children>
-                        <Label alignment="CENTER" contentDisplay="CENTER" text=" Recent Sales Table      ">
+                        <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="28.0" prefWidth="182.0" text=" Recent Sales Table      ">
                            <font>
                               <Font size="18.0" />
                            </font>
                         </Label>
                      </children>
                   </HBox>
-                  <Separator layoutY="223.0" prefHeight="18.0" prefWidth="600.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
-                  <HBox layoutX="200.0" layoutY="247.0" prefHeight="100.0" prefWidth="200.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                  <Separator layoutY="225.0" prefHeight="18.0" prefWidth="900.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+                  <HBox layoutX="200.0" layoutY="247.0" prefHeight="135.0" prefWidth="900.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
                      <children>
-                        <TableView prefHeight="66.0" prefWidth="900.0" HBox.hgrow="ALWAYS">
+                        <TableView prefHeight="131.0" prefWidth="900.0" HBox.hgrow="ALWAYS">
                            <columns>
-                              <TableColumn prefWidth="38.0" text="id" />
-                              <TableColumn prefWidth="270.0" text="Product" />
-                              <TableColumn minWidth="2.0" prefWidth="90.0" text="Quantity" />
-                              <TableColumn minWidth="0.0" prefWidth="201.0" text="Date" />
+                              <TableColumn fx:id="tabelId" prefWidth="38.0" text="id" />
+                              <TableColumn fx:id="productId" prefWidth="270.0" text="Product" />
+                              <TableColumn fx:id="quantityId" minWidth="2.0" prefWidth="90.0" text="Quantity" />
+                              <TableColumn fx:id="dateId" minWidth="0.0" prefWidth="201.0" text="Date" />
                            </columns>
                            <columnResizePolicy>
                               <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
@@ -97,9 +96,9 @@
                      </children>
                   </HBox>
                   <Separator layoutX="194.0" layoutY="346.0" prefHeight="3.0" prefWidth="200.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
-                  <VBox layoutX="1.0" layoutY="349.0" prefHeight="52.0" prefWidth="600.0" spacing="5.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                  <VBox layoutX="1.0" layoutY="386.0" prefHeight="61.0" prefWidth="900.0" spacing="5.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
                      <children>
-                        <HBox prefHeight="12.0" prefWidth="900.0" spacing="5.0">
+                        <HBox prefHeight="24.0" prefWidth="900.0" spacing="5.0">
                            <children>
                               <Label text="Quick Actions / Shortcuts: " HBox.hgrow="ALWAYS" />
                            </children>
@@ -107,26 +106,32 @@
                               <Insets left="10.0" />
                            </padding>
                         </HBox>
-                        <HBox prefHeight="100.0" prefWidth="200.0">
+                        <HBox prefHeight="59.0" prefWidth="900.0">
                            <children>
                               <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" HBox.hgrow="ALWAYS">
                                  <children>
-                                    <Button mnemonicParsing="false" text="Button" />
+                                    <Button fx:id="viewProductsId" mnemonicParsing="false" text="View Products" />
                                  </children>
                               </HBox>
-                              <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" HBox.hgrow="ALWAYS">
+                              <HBox alignment="CENTER" prefHeight="35.0" prefWidth="297.0" HBox.hgrow="ALWAYS">
                                  <children>
-                                    <Button mnemonicParsing="false" text="Button" />
+                                    <Button fx:id="viewCustomerId" mnemonicParsing="false" text="View Customer" />
                                  </children>
                               </HBox>
                               <HBox alignment="TOP_CENTER" prefHeight="100.0" prefWidth="200.0" HBox.hgrow="ALWAYS">
                                  <children>
-                                    <Button mnemonicParsing="false" text="Button" />
+                                    <Button fx:id="viewSalesId" mnemonicParsing="false" text="View Sales" />
                                  </children>
                               </HBox>
                            </children>
+                           <padding>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </padding>
                         </HBox>
                      </children>
+                     <opaqueInsets>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </opaqueInsets>
                   </VBox>
                </children>
             </AnchorPane>
