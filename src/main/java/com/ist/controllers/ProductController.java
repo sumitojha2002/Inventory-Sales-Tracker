@@ -2,15 +2,18 @@ package com.ist.controllers;
 
 import com.ist.dao.ProductDAO;
 import com.ist.models.Product;
+import com.ist.utils.AlertUtils;
+import com.ist.utils.SceneUtils;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.control.Alert;
+
 import javafx.scene.control.Button;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.stage.Stage;
 
 public class ProductController {
     @FXML private TextField product_name;
@@ -30,6 +33,7 @@ public class ProductController {
     @FXML private TableColumn<Product,String>categoryId;
     @FXML private TableColumn<Product,Double>priceId;
 
+
     @FXML
     public void initialize(){
         tableId.setCellValueFactory(new PropertyValueFactory<>("id"));
@@ -41,6 +45,7 @@ public class ProductController {
     productTable.setItems(pDao.getAllProducts());
     }
     
+
     @FXML
     public void performSave(ActionEvent e) {
     try {
@@ -61,16 +66,15 @@ public class ProductController {
         price.clear();
 
     } catch (NumberFormatException ex) {
-        System.err.println("Invalid number format: " + ex.getMessage());
-        Alert alert = new Alert(Alert.AlertType.ERROR);
-        alert.setTitle("Invalid Input");
-        alert.setHeaderText("Quantity and Price must be numbers!");
-        alert.showAndWait();
+        AlertUtils.NumberExceptionAlert(ex);
     } catch (Exception ex) {
         ex.printStackTrace();
     }
     }
 
+    public void deleteSwitch(ActionEvent e){
+        SceneUtils.swtichScene(e, "/fxml/alert/deleteAlert.fxml");        
+    }
 
 
 }

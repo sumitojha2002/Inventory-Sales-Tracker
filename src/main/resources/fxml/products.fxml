@@ -91,8 +91,8 @@
                         <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="100.0" VBox.vgrow="ALWAYS">
                            <children>
                               <Button mnemonicParsing="false" onAction="#performSave" text="Save" />
-                              <Button mnemonicParsing="false" text="Update" />
-                              <Button mnemonicParsing="false" text="Delete" />
+                              <Button mnemonicParsing="false" text="Update"  />
+                              <Button mnemonicParsing="false" text="Delete"  onAction="#deleteSwitch"/>
                               <Button mnemonicParsing="false" text="Clear" />
                            </children>
                         </HBox>
